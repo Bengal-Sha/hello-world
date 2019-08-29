@@ -1,0 +1,47 @@
+import os
+import socket
+import uuid 
+def get_Host_name_IP(): 
+    try: 
+        host_name = socket.gethostname() 
+        host_ip = socket.gethostbyname(host_name) 
+        print("Hello user of",host_name) 
+        print("you are using this from ",host_ip) 
+    except: 
+        print("Unable to get Hostname and IP") 
+get_Host_name_IP()
+print ("The MAC address you are using in formatted way is : ", end="") 
+print (':'.join(['{:02x}'.format((uuid.getnode() >> ele) & 0xff) 
+for ele in range(0,8*6,8)][::-1])) 
+print()
+print("%%%%%%%%%%%%%%%%%%%%%")
+print("%%(c)the bengal sha%%")
+print("%%%%%%%%%%%%%%%%%%%%%")
+print()
+print("Let's use calculator,")
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+print("Select Operation")
+print("1: add")
+print("2: subtract")
+print("3: multiply")
+print("4: divide")
+print("5: x to the power of y")
+print("6: divide and delete decimals")
+print("7: Calculate the Factorial of a Number")
+choice = input("Enter choice(1/2/3/4/5/6/7): ")
+a = num1 + num2
+b = num1 - num2
+c = num1 * num2
+d = num1 / num2
+e = num1 ** num2
+f = num1 // num2
+g = num1 % num2
+if choice == '1':print(a)
+if choice == '2':print(b)
+if choice == '3':print(c)
+if choice == '4':print(d)
+if choice == '5':print(e)
+if choice == '6':print(f)
+if choice == '7':print(g)
+
